@@ -47,7 +47,10 @@ expense-tracker-starter/
 │   └── vite.svg
 ├── src/
 │   ├── assets/
-│   ├── App.jsx
+│   ├── App.jsx              # Main app component, manages state
+│   ├── Summary.jsx          # Displays income, expenses, and balance
+│   ├── TransactionForm.jsx  # Form to add new transactions
+│   ├── TransactionList.jsx  # Displays and filters transactions
 │   ├── App.css
 │   ├── index.css
 │   └── main.jsx
@@ -56,6 +59,15 @@ expense-tracker-starter/
 ├── vite.config.js
 └── eslint.config.js
 ```
+
+## Architecture
+
+The app follows a component-based architecture:
+
+- **App.jsx**: Main container that holds the transactions state and coordinates child components
+- **Summary.jsx**: Receives transactions and calculates total income, expenses, and balance
+- **TransactionForm.jsx**: Manages form state and emits new transactions via callback
+- **TransactionList.jsx**: Handles filtering and displays the transaction table
 
 ## License
 
